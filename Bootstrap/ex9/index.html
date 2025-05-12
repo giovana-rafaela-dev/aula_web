@@ -1,314 +1,275 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechNova</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-    }
-    .tab-content {
-      display: none;
-    }
-    #tab-web:checked ~ #content-web,
-    #tab-mobile:checked ~ #content-mobile,
-    #tab-iot:checked ~ #content-iot,
-    #tab-consultoria:checked ~ #content-consultoria {
-      display: block;
-    }
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-    }
-    .accordion-input:checked ~ .accordion-content {
-      max-height: 500px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNova</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"> <!-- Adiciona Bootstrap Icons -->
 </head>
-<body class="bg-gray-900 text-gray-100">
+<body>
+    <nav class="bg-dark text-white py-2 px-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <p class="mb-0">TechNova</p>
+            <ul class="nav">
+                <li class="nav-item"><a class="nav-link text-white" href="#scrollinicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#scrollservico">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#scrollequipe">Equipe</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#scrollcontato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <nav class="fixed top-0 left-0 right-0 bg-black shadow-md px-4 py-3 z-50">
-    <div class="flex justify-between items-center">
-      <a href="#inicio" class="text-blue-500 font-bold text-xl">TechNova</a>
-      <div class="hidden md:flex space-x-6">
-        <a href="#inicio" class="text-white hover:text-blue-400 transition">Início</a>
-        <a href="#servicos" class="text-white hover:text-blue-400 transition">Serviços</a>
-        <a href="#equipe" class="text-white hover:text-blue-400 transition">Equipe</a>
-        <a href="#contato" class="text-white hover:text-blue-400 transition">Contato</a>
-      </div>
-      <button class="md:hidden text-white focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+    <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-dark bg-dark shadow fixed-top px-4">
+        <a class="navbar-brand font-weight-bold text-primary" href="#">TechNova</a>
+        <div class="ml-auto">
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a class="nav-link text-light" href="#scrollinicio">Início</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="#scrollservico">Serviços</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="#scrollequipe">Equipe</a></li>
+                <li class="nav-item"><a class="nav-link text-light" href="#scrollcontato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container py-5 mt-5">
+        <h2 id="scrollinicio" class="mt-5 text-center display-5 font-weight-bold text-dark  ">Bem-vindo à TechNova</h2>
+        <p class="text-center lead mt-3">Na <strong>TechNova</strong>, moldamos o futuro digital com soluções inovadoras. De software a IoT, nosso foco é impulsionar negócios com tecnologia e criatividade.</p>
+        <div class="text-center my-4">
+            <a href="#scrollservico" class="btn btn-primary btn-lg">Conheça nossos serviços</a>
+        </div>
+
+        <!-- Seção de Serviços -->
+        <section id="scrollservico" class="bg-secondary text-white py-5">
+            <div class="container text-center">
+                <h1 class="mb-4 display-4 font-weight-bold">Serviços</h1>
+                <ul class="nav nav-tabs justify-content-center mb-4 border-white" id="servicosTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active text-white bg-transparent border-white" id="web-tab" data-toggle="tab" data-target="#web" type="button" role="tab">
+                            <i class="bi bi-globe"></i> Web
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-white bg-transparent border-white" id="mobile-tab" data-toggle="tab" data-target="#mobile" type="button" role="tab">
+                            <i class="bi bi-phone"></i> Mobile
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-white bg-transparent border-white" id="iot-tab" data-toggle="tab" data-target="#iot" type="button" role="tab">
+                            <i class="bi bi-wifi"></i> IoT
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link text-white bg-transparent border-white" id="consultoria-tab" data-toggle="tab" data-target="#consultoria" type="button" role="tab">
+                            <i class="bi bi-lightbulb"></i> Consultoria
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="tab-content fs-5" id="servicosTabContent">
+                    <div class="tab-pane fade show active" id="web" role="tabpanel">
+                        <img src="Gemini_Generated_Image_ggs6i8ggs6i8ggs6.jpg" class="img-fluid rounded mb-3 mx-auto d-block" alt="Serviço Web" style="max-width: 300px;">
+                        Desenvolvimento de sites modernos e responsivos.
+                    </div>
+                    <div class="tab-pane fade" id="mobile" role="tabpanel">
+                        <img src="Gemini_Generated_Image_qu40nnqu40nnqu40.jpg" class="img-fluid rounded mb-3 mx-auto d-block" alt="Serviço Mobile" style="max-width: 300px;">
+                        Criação de aplicativos móveis Android e iOS.
+                    </div>
+                    <div class="tab-pane fade" id="iot" role="tabpanel">
+                        <img src="Gemini_Generated_Image_qm0n41qm0n41qm0n.jpg" class="img-fluid rounded mb-3 mx-auto d-block" alt="Serviço IoT" style="max-width: 300px;">
+                        Soluções automatizadas com Internet das Coisas.
+                    </div>
+                    <div class="tab-pane fade" id="consultoria" role="tabpanel">
+                        <img src="Gemini_Generated_Image_pyhx3fpyhx3fpyhx.jpg" class="img-fluid rounded mb-3 mx-auto d-block" alt="Serviço Consultoria" style="max-width: 300px;">
+                        Consultoria especializada em tecnologia verde.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="scrollequipe" class="bg-transparent text-center py-5">
+            <div class="container">
+                <h1 class="mb-4 display-4 font-weight-bold text-dark">Equipe</h1>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <div class="col">
+                        <div class="card h-100 text-center border border-dark text-dark">
+                            <img src="Gemini_Generated_Image_ycgr2dycgr2dycgr.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px;" alt="Maria Silva">
+                            <div class="card-body">
+                                <h5 class="card-title">Maria Silva</h5>
+                                <p class="card-text">CEO</p>
+                                <button class="btn btn-outline-light bg-primary" data-toggle="modal" data-target="#modal1">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="modal1" tabindex="-1" aria-labelledby="modal1Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content bg-white text-black">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal1Label">Maria Silva</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Maria é a CEO da nossa empresa.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center border border-dark text-dark">
+                            <img src="Gemini_Generated_Image_vh35bovh35bovh35.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px;" alt="Homero Santos">
+                            <div class="card-body">
+                                <h5 class="card-title">Homero Santos</h5>
+                                <p class="card-text">Engenheiro de IoT</p>
+                                <button class="btn btn-outline-light bg-primary" data-toggle="modal" data-target="#modal2">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="modal2" tabindex="-1" aria-labelledby="modal2Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content bg-white text-black">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal2Label">Homero Santos</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Homero lidera projetos de automação sustentável com IoT.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center border  border-dark text-dark">
+                            <img src="Gemini_Generated_Image_86eofx86eofx86eo.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px;" alt="Carla Maria">
+                            <div class="card-body">
+                                <h5 class="card-title">Carla Maria</h5>
+                                <p class="card-text">Consultora Ambiental</p>
+                                <button class="btn btn-outline-light bg-primary" data-toggle="modal" data-target="#modal3">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="modal3" tabindex="-1" aria-labelledby="modal3Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content bg-white text-black">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal3Label">Carla Maria</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Carla auxilia empresas a adotarem práticas verdes.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100 text-center border  border-dark text-dark">
+                            <img src="Gemini_Generated_Image_6u9hg16u9hg16u9h.jpg" class="card-img-top rounded-circle mx-auto mt-3" style="width: 100px;" alt="Larissa Potifar">
+                            <div class="card-body">
+                                <h5 class="card-title">Larissa Potifar</h5>
+                                <p class="card-text">Desenvolvedora Mobile</p>
+                                <button class="btn btn-outline-light bg-primary" data-toggle="modal" data-target="#modal4">Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="modal fade" id="modal4" tabindex="-1" aria-labelledby="modal4Label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content bg-white text-black">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal4Label">Larissa Potifar</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">Larissa desenvolve apps sustentáveis para dispositivos móveis.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2 id="scrollcontato" class="mt-5 text-center display-5 font-weight-bold text-dark">Contato</h2>
+        <form class="was-validated mt-4 bg-light bg-opacity-50 p-4 rounded-4" novalidate>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <label for="nome" class="form-label text-dark">Nome</label>
+                    <input type="text" class="form-control text-gray-400 border-dark" id="nome" required>
+                    <div class="invalid-feedback">Campo obrigatório</div>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-labeltext-dark">E-mail</label>
+                    <input type="email" class="form-control text-gray-400 border-dark" id="email" required>
+                    <div class="invalid-feedback">Informe um e-mail válido</div>
+                </div>
+                <div class="col-12">
+                    <label for="assunto" class="form-label text-dark">Assunto</label>
+                    <input type="text" class="form-control text-gray-400 border-dark" id="assunto" required>
+                    <div class="invalid-feedback">Preencha o assunto</div>
+                </div>
+                <div class="col-12">
+                    <label for="mensagem" class="form-label text-dark">Mensagem</label>
+                    <textarea class="form-control text-gray-400 border-dark" id="mensagem" rows="4" required></textarea>
+                    <div class="invalid-feedback">Digite sua mensagem</div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary px-5 py-2 fs-5" type="submit">Enviar</button>
+            </div>
+        </form>
+
+        <section id="faq" class="py-5 ">
+            <div class="container bg-light bg-opacity-50 p-4 rounded-4 ">
+                <h2 class="text-center mb-4 display-5 font-weight-bold text-dark">Perguntas Frequentes</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item bg-transparent text-gray-600 border border-light">
+                        <h2 class="accordion-header" id="faqHeading1">
+                            <button class="accordion-button bg-transparent text-gray-600 border-0 text-sm" type="button" data-toggle="collapse" data-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                                Como a TechNova contribui?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHeading1" data-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                A TechNova automatiza máquinas industriais com foco na eficiência energética e redução de resíduos.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item text-gray-600 border border-top-0 border-light">
+                        <h2 class="accordion-header" id="faqHeading2">
+                            <button class="accordion-button collapsed text-gray-600 border-0" type="button" data-toggle="collapse" data-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                                Quais serviços a TechNova oferece?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHeading2" data-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Oferecemos soluções em Web, Mobile, IoT e consultoria especializada para automação sustentável de processos industriais.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item bg-transparent text-gray-600 border border-top-0 border-light rounded-bottom">
+                        <h2 class="accordion-header" id="faqHeading3">
+                            <button class="accordion-button collapsed bg-transparent text-gray-600 border-0" type="button" data-toggle="collapse" data-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                                Posso solicitar um projeto mais personalizado?
+                            </button>
+                        </h2>
+                        <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHeading3" data-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Sim! Nossa equipe está preparada para desenvolver projetos personalizados de acordo com a necessidade do seu negócio.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-  </nav>
 
-  <section id="inicio" class="pt-24 pb-16 px-4 md:px-0">
-    <div class="container mx-auto max-w-4xl text-center">
-      <h1 class="text-4xl md:text-5xl font-semibold mb-6">Bem-vindo à TechNova</h1>
-      <p class="text-lg md:text-xl mb-8">Na <strong class="font-bold">TechNova</strong>, moldamos o futuro digital com soluções inovadoras. De software a IoT, nosso foco é impulsionar negócios com tecnologia e criatividade.</p>
-      <a href="#servicos" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Conheça nossos serviços</a>
-    </div>
-  </section>
-
-  <section id="servicos" class="py-16 bg-gray-800">
-    <div class="container mx-auto max-w-6xl px-4">
-      <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12">Serviços</h2>
-
-      <div class="max-w-4xl mx-auto">
-        <div class="flex flex-wrap justify-center border-b border-gray-600 mb-8">
-          <input type="radio" name="servicos-tab" id="tab-web" class="hidden" checked>
-          <label for="tab-web" class="px-4 py-2 cursor-pointer text-white border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400 transition">Web</label>
-          
-          <input type="radio" name="servicos-tab" id="tab-mobile" class="hidden">
-          <label for="tab-mobile" class="px-4 py-2 cursor-pointer text-white border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400 transition">Mobile</label>
-          
-          <input type="radio" name="servicos-tab" id="tab-iot" class="hidden">
-          <label for="tab-iot" class="px-4 py-2 cursor-pointer text-white border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400 transition">IoT</label>
-          
-          <input type="radio" name="servicos-tab" id="tab-consultoria" class="hidden">
-          <label for="tab-consultoria" class="px-4 py-2 cursor-pointer text-white border-b-2 border-transparent hover:border-blue-400 hover:text-blue-400 transition">Consultoria</label>
-        </div>
-        
-        <div class="relative">
-          <div id="content-web" class="tab-content text-center">
-            <img src="Gemini_Generated_Image_ggs6i8ggs6i8ggs6.jpg" class="mx-auto mb-6 rounded-lg max-w-xs" alt="Serviço Web">
-            <p class="text-lg">Desenvolvimento de sites modernos e responsivos.</p>
-          </div>
-          
-          <div id="content-mobile" class="tab-content text-center">
-            <img src="Gemini_Generated_Image_qu40nnqu40nnqu40.jpg" class="mx-auto mb-6 rounded-lg max-w-xs" alt="Serviço Mobile">
-            <p class="text-lg">Criação de aplicativos móveis Android e iOS.</p>
-          </div>
-          
-          <div id="content-iot" class="tab-content text-center">
-            <img src="Gemini_Generated_Image_qm0n41qm0n41qm0n.jpg" class="mx-auto mb-6 rounded-lg max-w-xs" alt="Serviço IoT">
-            <p class="text-lg">Soluções automatizadas com Internet das Coisas.</p>
-          </div>
-          
-          <div id="content-consultoria" class="tab-content text-center">
-            <img src="Gemini_Generated_Image_pyhx3fpyhx3fpyhx.jpg" class="mx-auto mb-6 rounded-lg max-w-xs" alt="Serviço Consultoria">
-            <p class="text-lg">Consultoria especializada em tecnologia verde.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="equipe" class="py-16">
-    <div class="container mx-auto max-w-6xl px-4">
-      <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12">Equipe</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-
-        <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 text-center p-6">
-          <img src="Gemini_Generated_Image_ycgr2dycgr2dycgr.jpg" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Maria Silva">
-          <h3 class="text-xl font-semibold mb-2">Maria Silva</h3>
-          <p class="text-gray-400 mb-4">CEO</p>
-          <button onclick="openModal('modal1')" class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded transition duration-300">Saiba mais</button>
-        </div>
-        
-        <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 text-center p-6">
-          <img src="Gemini_Generated_Image_vh35bovh35bovh35.jpg" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Homero Santos">
-          <h3 class="text-xl font-semibold mb-2">Homero Santos</h3>
-          <p class="text-gray-400 mb-4">Engenheiro de IoT</p>
-          <button onclick="openModal('modal2')" class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded transition duration-300">Saiba mais</button>
-        </div>
-
-        <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 text-center p-6">
-          <img src="Gemini_Generated_Image_86eofx86eofx86eo.jpg" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Carla Maria">
-          <h3 class="text-xl font-semibold mb-2">Carla Maria</h3>
-          <p class="text-gray-400 mb-4">Consultora Ambiental</p>
-          <button onclick="openModal('modal3')" class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded transition duration-300">Saiba mais</button>
-        </div>
-
-        <div class="bg-gray-800 rounded-lg overflow-hidden border border-gray-700 text-center p-6">
-          <img src="Gemini_Generated_Image_6u9hg16u9hg16u9h.jpg" class="w-24 h-24 rounded-full mx-auto mb-4" alt="Larissa Potifar">
-          <h3 class="text-xl font-semibold mb-2">Larissa Potifar</h3>
-          <p class="text-gray-400 mb-4">Desenvolvedora Mobile</p>
-          <button onclick="openModal('modal4')" class="bg-transparent border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white px-4 py-2 rounded transition duration-300">Saiba mais</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contato" class="py-16 bg-gray-800">
-    <div class="container mx-auto max-w-4xl px-4">
-      <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12">Contato</h2>
-      
-      <form class="bg-gray-700 bg-opacity-50 p-6 rounded-lg">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          <div>
-            <label for="nome" class="block mb-2">Nome</label>
-            <input type="text" id="nome" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-          </div>
-          <div>
-            <label for="email" class="block mb-2">E-mail</label>
-            <input type="email" id="email" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-          </div>
-        </div>
-        <div class="mb-6">
-          <label for="assunto" class="block mb-2">Assunto</label>
-          <input type="text" id="assunto" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
-        </div>
-        <div class="mb-6">
-          <label for="mensagem" class="block mb-2">Mensagem</label>
-          <textarea id="mensagem" rows="4" class="w-full bg-gray-800 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
-        </div>
-        <div class="text-center">
-          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition duration-300">Enviar</button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-
-  <section id="faq" class="py-16">
-    <div class="container mx-auto max-w-4xl px-4">
-      <h2 class="text-3xl md:text-4xl font-semibold text-center mb-12">Perguntas Frequentes</h2>
-      
-      <div class="bg-gray-800 bg-opacity-50 p-6 rounded-lg">
-
-        <div class="mb-4 border-b border-gray-700 pb-4">
-          <input type="checkbox" id="faq1" class="accordion-input hidden">
-          <label for="faq1" class="flex justify-between items-center cursor-pointer">
-            <h3 class="text-lg font-semibold">Como a TechNova contribui?</h3>
-            <svg class="w-5 h-5 transform transition-transform duration-300 accordion-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </label>
-          <div class="accordion-content mt-2">
-            <p class="text-gray-300">A TechNova automatiza máquinas industriais com foco na eficiência energética e redução de resíduos.</p>
-          </div>
-        </div>
-        
-        <div class="mb-4 border-b border-gray-700 pb-4">
-          <input type="checkbox" id="faq2" class="accordion-input hidden">
-          <label for="faq2" class="flex justify-between items-center cursor-pointer">
-            <h3 class="text-lg font-semibold">Quais serviços a TechNova oferece?</h3>
-            <svg class="w-5 h-5 transform transition-transform duration-300 accordion-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </label>
-          <div class="accordion-content mt-2">
-            <p class="text-gray-300">Oferecemos soluções em Web, Mobile, IoT e consultoria especializada para automação sustentável de processos industriais.</p>
-          </div>
-        </div>
-        
-        <div class="mb-4">
-          <input type="checkbox" id="faq3" class="accordion-input hidden">
-          <label for="faq3" class="flex justify-between items-center cursor-pointer">
-            <h3 class="text-lg font-semibold">Posso solicitar um projeto mais personalizado?</h3>
-            <svg class="w-5 h-5 transform transition-transform duration-300 accordion-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </label>
-          <div class="accordion-content mt-2">
-            <p class="text-gray-300">Sim! Nossa equipe está preparada para desenvolver projetos personalizados de acordo com a necessidade do seu negócio.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div id="modal1" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-    <div class="bg-gray-800 rounded-lg max-w-md w-full p-6">
-      <div class="flex justify-between items-center mb-4">
-        <h3 class="text-xl font-semibold">Maria Silva</h3>
-        <button onclick="closeModal('modal1')" class="text-gray-400 hover:text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <p>Maria é a CEO da nossa empresa.</p>
-    </div>
-  </div>
-
-  <div id="modal2" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-    <div class="bg-gray-800 rounded-lg max-w-md w-full p-6">
-      <div class="flex justify-between items-center mb-4">
-        <h3 class="text-xl font-semibold">Homero Santos</h3>
-        <button onclick="closeModal('modal2')" class="text-gray-400 hover:text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <p>Homero lidera projetos de automação sustentável com IoT.</p>
-    </div>
-  </div>
-
-  <div id="modal3" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-    <div class="bg-gray-800 rounded-lg max-w-md w-full p-6">
-      <div class="flex justify-between items-center mb-4">
-        <h3 class="text-xl font-semibold">Carla Maria</h3>
-        <button onclick="closeModal('modal3')" class="text-gray-400 hover:text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <p>Carla auxilia empresas a adotarem práticas verdes.</p>
-    </div>
-  </div>
-
-  <div id="modal4" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-    <div class="bg-gray-800 rounded-lg max-w-md w-full p-6">
-      <div class="flex justify-between items-center mb-4">
-        <h3 class="text-xl font-semibold">Larissa Potifar</h3>
-        <button onclick="closeModal('modal4')" class="text-gray-400 hover:text-white">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
-        </button>
-      </div>
-      <p>Larissa desenvolve apps sustentáveis para dispositivos móveis.</p>
-    </div>
-  </div>
-
-  <footer class="bg-black py-8">
-    <div class="container mx-auto px-4 text-center">
-      <p>&copy; 2025 TechNova. Todos os direitos reservados.</p>
-    </div>
-  </footer>
-
-  <script>
-    function openModal(modalId) {
-      document.getElementById(modalId).classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-    }
-    
-    function closeModal(modalId) {
-      document.getElementById(modalId).classList.add('hidden');
-      document.body.style.overflow = 'auto';
-    }
-    
-    window.onclick = function(event) {
-      if (event.target.classList.contains('bg-opacity-50')) {
-        const modals = document.querySelectorAll('[id^="modal"]');
-        modals.forEach(modal => {
-          modal.classList.add('hidden');
-        });
-        document.body.style.overflow = 'auto';
-      }
-    }
-    
-    document.querySelectorAll('.accordion-input').forEach(input => {
-      input.addEventListener('change', function() {
-        const arrow = this.nextElementSibling.querySelector('.accordion-arrow');
-        if (this.checked) {
-          arrow.classList.add('rotate-180');
-        } else {
-          arrow.classList.remove('rotate-180');
-        }
-      });
-    });
-  </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>

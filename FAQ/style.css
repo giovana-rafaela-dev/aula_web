@@ -1,0 +1,120 @@
+.ubuntu-bold {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Ubuntu",sans-serif;
+}
+
+.a{
+    display: flex;
+    flex-direction: column;
+    background-image: url('background-pattern-desktop.svg');
+    background-size: cover;
+    width: 1265px;
+    height: 300px;
+    position: relative;
+}
+
+.b{
+    display: flex;
+    flex-direction: column;
+    background-image: url('fotocerta2.png');
+    height: 700px;
+    width: 1265px;
+    position: relative;
+}
+
+.container{
+    background-color: #f5f2f2;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: absolute;
+    border-radius: 10px;
+    height: 560px;
+    width: 500px;
+    border-radius: 10px;
+    top:30%;
+}
+
+.titulo{
+    display: flex; 
+    flex-direction: row;
+}
+
+.titulo2{
+     display: flex;
+     flex-direction: row;
+}
+
+h1{
+    margin-left: 20px;
+    margin-top: 45px;
+    font-size: 40px;
+    color: rgb(43, 2, 51);
+}
+
+h4{
+    margin-left: 38px;
+    margin-bottom: 25px;
+    margin-top: 30px;
+    color: rgb(43, 2, 51);
+}
+
+p{
+    margin-left: 38px;
+    margin-right: 38px;
+    margin-top: 5px;
+    text-align: justify;
+    color: grey;
+}
+
+hr{
+    width: 85%;
+    border-color: rgba(255, 254, 254, 0.881);
+}
+
+.lista, .lista2, .lista3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.lista2{
+    margin-right: none;
+}
+
+#estrela{
+    height: 50px;
+    width: 50px;
+    margin-top: 45px;
+    margin-left: 28px;
+}
+
+#menos{
+    margin-left: 25px;
+    margin-top: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+#mais,#mais2,#mais3{
+    height: 25px;
+    margin-right:35px ;
+    margin-top: 23px;
+    width: 25px;
+    cursor: pointer;
+}
+
+#bb{
+    width: max-content;
+    margin-right: 20px;
+    padding-right: 20px;
+}

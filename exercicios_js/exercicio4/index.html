@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <input type="number" placeholder="Digite um número" id="adic">
+    <button onclick="Somar()">Enviar</button>
+    <div id="resultado"></div>
+
+    <script>
+        let soma = 0; 
+
+        function Somar(){
+            const numerinho = parseInt(document.getElementById('adic').value);
+
+            if(numerinho !== 0){
+                soma += numerinho;
+                document.getElementById('adic').value = '';
+            }
+            else{
+                document.getElementById('resultado').innerText = soma;
+            }
+        }
+    </script>
+</body>
+</html>

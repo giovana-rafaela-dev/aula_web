@@ -1,0 +1,107 @@
+.libre-baskerville-regular {
+    font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(247, 231, 200);
+    justify-items: center;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 650px;
+    height: 1500px;
+    margin-left: 30rem;
+    margin-right: 30rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    border-radius: 20px;
+}
+#foto{
+    justify-content: flex-start;
+    align-items: center;
+    width: 625px;
+    height: 350px;
+    margin-left: 2.5%;
+    margin-right: 3%;
+    border-radius: 35px;
+    padding: 1.5rem 1.5rem;
+
+}
+.time{
+    display: flex;
+    flex-direction: column;
+    height: 150px ;
+    border-radius: 20px;
+    justify-content: center;
+    background-color: rgb(248, 235, 245);
+    margin-left: 25px;
+    margin-right: 25px;
+} 
+.coluna1,.coluna2,.coluna3,.coluna4{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+h1{
+    display: flex;
+    justify-content:left;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    font-family: "Libre Baskerville", serif;
+}
+h3{
+    display: flex;
+    margin-left: 30px;
+    font-family: "Libre Baskerville", serif;
+    font-size: 22px;
+    color:rgb(119, 60, 1)
+}
+h4{
+    font-family: "Montserrat", serif;
+    font-size: 17px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    color:rgb(90, 25, 43);
+}
+ul{
+    padding-left: 55px;
+    margin-top: 5px;
+}
+ol{
+    justify-content: left;
+    padding-right: 20px;
+}
+
+li{
+    color: rgb(41, 39, 39);
+    font-family: "Montserrat", serif;
+    font-size: small;
+}
+li::marker{
+    color:rgb(119, 60, 1)
+}
+p{
+    display: flex;
+    justify-content: left;
+    padding-right: 35px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    font-family: "Montserrat", serif;
+    text-align: justify;
+    margin: 0;
+    font-size: small;
+}
+hr{
+   height: 2px;
+   width: 90%;
+}

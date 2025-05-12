@@ -1,0 +1,113 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+header{
+    background-color: aqua;
+    margin: 0;
+    height: 15vh;
+    display: flex;
+    align-items:flex-start;
+}
+p{
+    margin: 0;
+    margin-left: 50% ;
+    margin-right: 50%;
+    font-style: italic;
+    color: rgb(59, 58, 58);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.content{
+    background-color: rgb(228, 67, 155);
+    width: 75%;
+    height: 75vh;
+}
+nav{
+    background-color: rgb(249, 249, 133);
+    width: 25%;
+}
+.partes{
+    display: flex;
+    flex-direction: row;
+    background-color: limegreen;
+    height: 10vh;
+    align-items: flex-start;
+    gap: 1px;
+    text-align: center;
+    border-left : 2px solid white;
+    border-right: 2px solid white;
+}
+.pt1, .pt3{
+    width: 25%;
+    font-style: italic;
+    color: rgb(59, 58, 58);
+    height: 10vh;
+}
+.pt2{
+    width: 50%;
+    font-style: italic;
+    color: rgb(59, 58, 58);
+    height: 10vh;
+    border-left : 2px solid white;
+    border-right: 2px solid white;
+    height: 10vh;
+}
+
+@media screen and (max-width: 412px) {
+    body{
+        height: 100%;
+    }
+    header{
+        width: 100%;
+        height: 15vh;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .content{
+        flex-wrap: wrap;
+        width: 100%;
+        height: 50vh;
+    }
+    nav{
+        width: 100%;
+        height: 25vh;
+    }
+    .partes{
+        flex-wrap: wrap;
+    }
+    .pt1,.pt2{
+        width: 25%;
+        background-color: limegreen;
+        align-content: center;
+    }
+    .pt3{
+        width: 100%;
+        border-top: 2px solid white;
+        gap: 1px;
+        background-color: limegreen;
+        align-content: center;
+    }
+
+        
+}
+@media screen and (max-width: 720px) {
+    .pt1,.pt2{
+        width: 50%;
+        background-color: limegreen;
+        height: 10vh;
+    }
+    .pt2{
+        width: 50%;
+        background-color: limegreen;
+        height: 10vh;
+    }
+    .pt3{
+        width: 50%;
+        height: 10vh;
+    }
+       
+}

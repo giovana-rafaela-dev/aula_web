@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <input type="number" placeholder="Insira a 1° nota" id="num1">
+    <input type="number" placeholder="Insira a 2° nota" id="num2">
+    <input type="number" placeholder="Insira a 3° nota" id="num3">
+    <button onclick="calcular()">Calcular média</button>
+
+    <div id="resultado"></div>
+
+    <script>
+        function calcular(){
+            const n1 = parseFloat(document.getElementById('num1').value);
+            const n2 = parseFloat(document.getElementById('num2').value);
+            const n3 = parseFloat(document.getElementById('num3').value);
+
+            const media = (n1 + n2 + n3)/3
+            document.getElementById('resultado').textContent = media
+            if(isNaN(n1) || isNaN(n2) || isNaN(n3)){
+            document.getElementById('resultado').textContent += " " + "Por gentileza, insira um número válido!";
+            return;
+            }
+            if (media>=6){
+            document.getElementById('resultado').textContent += " " +  "Você foi aprovado!";
+            } else{
+            document.getElementById('resultado').textContent += " " + "Você foi reprovado!";
+            }
+           
+        }
+        
+    </script>
+
+</body>
+</html>

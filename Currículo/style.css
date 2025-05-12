@@ -1,0 +1,108 @@
+body{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    align-items: flex-end;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.coluna{
+    width: 185px;
+    align-items: center;
+    height: 800px;
+    margin-top: 50px;
+    background-color: rgb(78, 129, 250);
+    border-radius: 10px;
+    margin-left: 100px;
+    margin-right: none;
+    padding: 10px;
+    border-radius: 10px 0px 0px 10px;
+    
+}
+
+.coluna2{
+    width: 800px;
+    height: 800px;
+   background-color: rgb(255, 255, 255);
+   margin-top: 50px ;
+   margin-left: none;
+   margin-right: 100px;
+   border-radius: 0px 10px 10px 0px;
+}
+.coluna,.coluna2{
+    padding: 20px;
+    background-color: rgb(255, 255, 255), ;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+.contato{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 13px;
+}
+.telefone{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.localização{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.competencia{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1px;
+    margin-bottom: 2px;
+
+}
+
+#foto{
+    height: 115px;
+    width: auto;
+    border-radius: 50%;
+    box-shadow: 5px 5px 5px;
+    align-items: center;
+    margin-left: 30px;
+    margin-right: 30px ;
+}
+#icon1{
+    height:20px;
+    width: 20px;
+    margin-top: 7px;
+    margin-left: none;
+    margin-right: none;
+}
+
+#icon2{
+    height: 20px;
+    width: 20px;
+    margin-top: 13px;
+    margin-left: 3px;
+    margin-right: 3px;
+
+}
+#icon3{
+    height: 20px;
+    width: 20px;
+    margin-top: 13px;
+}
+h2{
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+}
+h4{
+    text-align: center;
+    font-size: 14px;
+    font-family: Monaco;
+}
+hr{
+    border: 1px solid rgb(0, 3, 159);
+}
+p{
+    justify-content: center;
+}

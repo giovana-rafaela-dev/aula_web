@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Primo</title>
+</head>
+<body>
+    <input type="text" placeholder="Digite um número" id="numprimo">
+    <button onclick="Primo()">Verificar</button>
+
+    <p id="resultado"></p>
+    <script>
+        function Primo(){
+            const valor = parseInt(document.getElementById('numprimo').value);
+            const resultado = document.getElementById('resultado');
+
+            if(isNaN(valor) || valor < 1){
+                document.getElementById('resultado').innerText = "Por favor, insira um número válido";
+                return;
+            }
+            let eprimo = true;
+
+            if(valor === 1 ){
+                eprimo = false;
+            }else{
+                for(let i = 2; i<= Math.sqrt(valor); i++) {
+                    if (valor % i === 0 ) {
+                        eprimo = false;
+                        break;
+                    }
+                }
+            }
+
+            if (eprimo) {
+                resultado.innerText = valor + " é um número primo.";
+            } else {
+                resultado.innerText = valor + " não é um número primo.";
+            }
+        }
+    </script>
+</body>
+</html>

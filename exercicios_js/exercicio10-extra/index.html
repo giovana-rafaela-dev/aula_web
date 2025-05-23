@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Inverter String</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .bloco {
+            background-color: rgba(255, 255, 255, 0.744);
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .bloco input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 250px;
+            font-size: 16px;
+        }
+
+        .bloco button {
+            padding: 10px 20px;
+            background-color: #0d3e72;
+            color: rgba(255, 255, 255, 0.984);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="bloco">
+        <input type="text" id="palavra" placeholder="Digite um número">
+        <button onclick="inverter()">Inverter</button>
+        <p id="resultado"></p>
+    </div>
+
+    <script>
+        function inverter() {
+            palindromo = true
+
+            const palavra = document.getElementById('palavra').value;
+            const invertida = palavra.split('').reverse().join('');
+            if(palavra == invertida){
+                palindromo = true;
+                document.getElementById('resultado').innerText = 'Seu número é um palíndromo'
+                document.getElementById('resultado').style.color = "purple"
+            } else {
+                palindromo = false
+                document.getElementById('resultado').innerText = 'Seu número não é um palíndromo'
+                document.getElementById('resultado').style.color = "blue"
+            }
+        }
+    </script>
+</body>
+</html>

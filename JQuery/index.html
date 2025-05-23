@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <title>Pokémons</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin-top: 20px;
+        }
+
+        h1 {
+            color: #2abf38;
+            text-shadow: 2px 2px #18cf58;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .pokemon-table {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .pokemon-table th {
+            background-color: #4fd049;
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .pokemon-table td {
+            vertical-align: middle;
+            text-align: center;
+            padding: 12px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .pokemon-table img {
+            width: 70px;
+            height: 70px;
+            transition: transform 0.2s;
+        }
+
+        .pokemon-table img:hover {
+            transform: scale(1.2);
+        }
+
+        .pokemon-table tr {
+            transition: background-color 0.2s;
+        }
+
+        .pokemon-table tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .pokemon-name {
+            font-weight: 500;
+            color: #2a2a2a;
+            text-transform: capitalize;
+        }
+
+        .pokemon-species {
+            color: #555;
+            text-transform: capitalize;
+        }
+
+        .pagination-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .pagination {
+            flex-wrap: wrap;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .pokemon-table th,
+            .pokemon-table td {
+                font-size: 0.9rem;
+                padding: 8px;
+            }
+
+            .pokemon-table img {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Pokémons</h1>
+        <table id="pokemons" class="table pokemon-table mt-4">
+            <thead>
+                <tr>
+                    <th>Imagem</th>
+                    <th>Nome</th>
+                    <th>Espécie</th>
+                    <th>Altura (m)</th>
+                    <th>Peso (kg)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <nav class="pagination-container">
+            <ul id="pagination" class="pagination"></ul>
+        </nav>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

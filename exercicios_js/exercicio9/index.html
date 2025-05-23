@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Inverter String</title>
+</head>
+<body>
+    <input type="text" id="palavra" placeholder="Digite uma palavra">
+    <button onclick="inverter()">Contar Vogais</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function inverter() {
+            const entrada = document.getElementById('palavra').value;
+            const letras = entrada.toLowerCase().split('');
+            let contagem = 0;
+
+            letras.forEach(letra => {
+                if (['a', 'e', 'i', 'o', 'u'].includes(letra)) {
+                    contagem += 1;
+                }
+            });
+
+            document.getElementById('resultado').innerText = "Sua palavra tem " + contagem + " vogais.";
+        }
+    </script>
+</body>
+</html>

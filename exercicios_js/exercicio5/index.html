@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Inverter String</title>
 </head>
 <body>
     <input type="text" placeholder="Digite uma palavra" id="texto">
     <button onclick="Inverso()">Inverter</button>
 
+    <p id="resultado"></p>
+
     <script>
-        
+        function Inverso() {
+            const texto = document.getElementById('texto').value;
+            const palavra = texto.split('').reverse().join('');
+            document.getElementById('resultado').innerText = "Invertida: " + palavra;
+        }
     </script>
 </body>
 </html>

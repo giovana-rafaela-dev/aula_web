@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior Número</title>
+</head>
+<body>
+    <input type="number" placeholder="Digite alguns números" id="numero">
+    <button onclick="Encontrar()">Achar o maior</button>
+
+    <p id="resultado1"></p>
+    <p id="resultado2"></p>
+
+    <script>
+        const lista = []
+        let maior = null
+        let menor = null
+
+        function Encontrar(){
+            const n1 = Number(document.getElementById('numero').value);
+
+            if(n1 !== 0){
+                lista.push(n1);
+
+                if(maior === null || n1 > maior){
+                    maior = n1;
+
+                }
+                if( menor === null || n1 < menor){
+                    menor = n1;
+                }
+                document.getElementById('numero').value = '';
+                
+            }
+            else{
+                achar();
+            }
+            
+        }
+        function achar(){
+                document.getElementById('resultado1').innerText = "Maior Número: " + maior;
+                document.getElementById('resultado2').innerText = "Menor Número: " + menor;
+            }
+    </script>
+</body>
+</html>
